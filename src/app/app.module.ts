@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import {HttpModule} from '@angular/http';
+import {CoinMarketService} from './service/coinMarket.service';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    Ng2SmartTableModule
   ],
-  providers: [],
+  providers: [CoinMarketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
